@@ -95,6 +95,7 @@ public class LoginView extends javax.swing.JFrame {
         btnLogin.setFont(new java.awt.Font("Segoe UI", 1, 14)); // NOI18N
         btnLogin.setForeground(new java.awt.Color(255, 255, 255));
         btnLogin.setText("1. Login");
+        btnLogin.addActionListener(this::btnLoginActionPerformed);
 
         javax.swing.GroupLayout pnlMenuLayout = new javax.swing.GroupLayout(pnlMenu);
         pnlMenu.setLayout(pnlMenuLayout);
@@ -106,19 +107,19 @@ public class LoginView extends javax.swing.JFrame {
                     .addComponent(btnMenuKeluar, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(lblSubMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
                     .addComponent(btnLogin, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
-                    .addComponent(lblNamaMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1002, Short.MAX_VALUE))
+                    .addComponent(lblNamaMenu, javax.swing.GroupLayout.Alignment.LEADING, javax.swing.GroupLayout.DEFAULT_SIZE, 1200, Short.MAX_VALUE))
                 .addGap(40, 40, 40))
-            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, pnlMenuLayout.createSequentialGroup()
-                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(pnlMenuLayout.createSequentialGroup()
+                .addGap(583, 583, 583)
                 .addComponent(lblLogoMenu)
-                .addGap(485, 485, 485))
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE))
         );
         pnlMenuLayout.setVerticalGroup(
             pnlMenuLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlMenuLayout.createSequentialGroup()
-                .addGap(154, 154, 154)
+                .addGap(161, 161, 161)
                 .addComponent(lblLogoMenu)
-                .addGap(25, 25, 25)
+                .addGap(18, 18, 18)
                 .addComponent(lblNamaMenu)
                 .addGap(18, 18, 18)
                 .addComponent(lblSubMenu)
@@ -126,7 +127,7 @@ public class LoginView extends javax.swing.JFrame {
                 .addComponent(btnLogin, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addGap(36, 36, 36)
                 .addComponent(btnMenuKeluar, javax.swing.GroupLayout.PREFERRED_SIZE, 52, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(174, Short.MAX_VALUE))
+                .addContainerGap(220, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlMenuWrapLayout = new javax.swing.GroupLayout(pnlMenuWrap);
@@ -286,9 +287,9 @@ public class LoginView extends javax.swing.JFrame {
         pnlKananLayout.setVerticalGroup(
             pnlKananLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlKananLayout.createSequentialGroup()
-                .addGap(0, 195, Short.MAX_VALUE)
+                .addGap(0, 218, Short.MAX_VALUE)
                 .addComponent(pnlForm, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 196, Short.MAX_VALUE))
+                .addGap(0, 219, Short.MAX_VALUE))
         );
 
         javax.swing.GroupLayout pnlLoginLayout = new javax.swing.GroupLayout(pnlLogin);
@@ -369,9 +370,9 @@ public class LoginView extends javax.swing.JFrame {
         pnlTerimaWrapLayout.setVerticalGroup(
             pnlTerimaWrapLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(pnlTerimaWrapLayout.createSequentialGroup()
-                .addGap(0, 223, Short.MAX_VALUE)
+                .addGap(0, 246, Short.MAX_VALUE)
                 .addComponent(pnlTerima, javax.swing.GroupLayout.PREFERRED_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addGap(0, 223, Short.MAX_VALUE))
+                .addGap(0, 246, Short.MAX_VALUE))
         );
 
         pnlCards.add(pnlTerimaWrap);
@@ -419,6 +420,13 @@ public class LoginView extends javax.swing.JFrame {
         tujuan.setVisible(true);
         dispose();
     }//GEN-LAST:event_btnMasukActionPerformed
+
+    private void btnLoginActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_btnLoginActionPerformed
+        new DashboardAdmin().setVisible(true);
+        java.awt.Window w = javax.swing.SwingUtilities.getWindowAncestor(this);
+        if (w != null) {
+            w.dispose();
+        }    }//GEN-LAST:event_btnLoginActionPerformed
 
 
     private void tampil(String kartu) {
